@@ -1,0 +1,14 @@
+{
+  "name": "job-search-queue",
+  "version": "0.0.1-dev",
+  "main": "index.js",
+  "scripts": {
+    "build": "flutter build web",
+    "deploy": "firebase deploy --only hosting",
+    "build-and-deploy": "npm run build && npm run deploy",
+    "emulator": "firebase emulators:start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
