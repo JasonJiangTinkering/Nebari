@@ -66,15 +66,16 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  if (kDebugMode) {
-    try {
-      FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
-      await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
-    } catch (e) {
-      print('Failed to connect to Firebase emulators: $e');
-    }
-  }
-
+  // if (kDebugMode) {
+  //   try {
+  //     FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
+  //     await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
+  //     await FirebaseAuth.instance.setPersistence(Persistence.LOCAL);
+  //   } catch (e) {
+  //     print('Failed to connect to Firebase emulators: $e');
+  //   }
+  // }
+  
   runApp(GetMaterialApp(
     initialRoute: '/',
     getPages: [
